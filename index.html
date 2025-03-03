@@ -154,13 +154,13 @@
 
     <script>
         (function() {
-            emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS User ID
+            emailjs.init("d7qLg1HSrYZGI3bZm"); // Replace with your actual EmailJS User ID
         })();
 
         document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent default form submission
 
-            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+            emailjs.sendForm("service_dvilx6i", "template_485ynve", this)
                 .then(function(response) {
                     alert("Message sent successfully!");
                     console.log("Success:", response);
