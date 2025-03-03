@@ -149,28 +149,50 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Include EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
     <script>
+        document.addEventListener("contextmenu", event => event.preventDefault()); // Disable right-click
+
+        document.onkeydown = function(event) {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault();
+            }
+        };
+
         (function() {
-            emailjs.init("d7qLg1HSrYZGI3bZm"); // Replace with your actual EmailJS User ID
+            emailjs.init("d7qLg1HSrYZGI3bZm"); // Only use the PUBLIC key
         })();
-
+    
         document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            emailjs.sendForm("service_dvilx6i", "template_485ynve", this)
-                .then(function(response) {
+            event.preventDefault();
+    
+            // Validate & Sanitize Input
+            let name = DOMPurify.sanitize(this.name.value.trim());
+            let email = DOMPurify.sanitize(this.email.value.trim());
+            let phone = DOMPurify.sanitize(this.phone.value.trim());
+            let message = DOMPurify.sanitize(this.message.value.trim());
+    
+            if (!name || !email || !message) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+    
+            // Prepare EmailJS Params
+            const params = { name, email, phone, message };
+    
+            emailjs.send("service_dvilx6i", "template_485ynve", params)
+                .then(response => {
                     alert("Message sent successfully!");
                     console.log("Success:", response);
-                    location.reload();
-                }, function(error) {
+                    document.getElementById("contact-form").reset();
+                })
+                .catch(error => {
                     alert("Failed to send message. Try again.");
                     console.log("Error:", error);
                 });
         });
     </script>
-
+    
 </body>
 </html>
