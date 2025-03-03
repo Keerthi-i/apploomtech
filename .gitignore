@@ -1,0 +1,22 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# PHP
+*.log
+*.sqlite
+*.cache
+*.bak
+*.swp
+
+# XAMPP files (don't track logs, temporary files, etc.)
+/htdocs/*
+! /htdocs/.gitkeep
+
+# MySQL Database
+/mysql/*
+! /mysql/.gitkeep
+
+# Apache Logs and Temp Files
+/apache/logs/*
+/apache/tmp/*
