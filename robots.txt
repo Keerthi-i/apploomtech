@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://keerthi-i.github.io/apploomtech/sitemap.xml
