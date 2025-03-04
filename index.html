@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         header {
-            background: url('./images/main_bg.jpg') no-repeat center center/cover;
+            background: url('./images/bg2.jpg') no-repeat center center/cover;
             padding: 5rem 0;
         }
         .service-img {
@@ -47,7 +47,7 @@
         <p>We design and develop next-gen tech solutions to bring future-ready ideas to life. AppLoomTech is your partner in shaping what’s next.</p>
     </header>
 
-    <section id="about" class="container py-5">
+    <section id="about" class="container py-4">
         <h2>About Us</h2>
         <p>"At AppLoom Tech, we’re passionate about weaving innovation into every solution we create. As a forward-thinking tech startup, we specialize in building powerful, user-centric applications that drive growth and transform businesses. Our name reflects our mission: just like a loom intertwines threads to create something extraordinary, we connect ideas, technology, and creativity to craft future-ready digital experiences.
 
@@ -56,26 +56,52 @@
         Whether you're a startup with a groundbreaking idea or a business looking to elevate your digital presence, AppLoom Tech is your partner in crafting tomorrow’s tech, today.
         
         Let’s build something amazing together."</p>
+
+        <h4>Our Mission</h4>
+        <p>
+            At <strong>AppLoom Tech</strong>, our mission is to revolutionize businesses through cutting-edge technology. 
+            We strive to create intelligent, efficient, and future-ready solutions that drive innovation, 
+            improve productivity, and enhance digital experiences for our clients.
+        </p>
+
+        <h4>Our Vision</h4>
+        <p>
+            Our vision is to be a global leader in AI-driven solutions, automation, and cloud technologies, 
+            making technology more accessible, reliable, and scalable for businesses worldwide.
+        </p>
+
+        <h4>Why Choose AppLoom Tech?</h4>
+        <ul>
+            <li><strong>✔ Expertise in Next-Gen Technologies –</strong> AI, Automation, Cloud</li>
+            <li><strong>✔ Customized & Scalable Solutions –</strong> Tailored to business needs</li>
+            <li><strong>✔ Seamless User Experience –</strong> Designed for engagement and usability</li>
+            <li><strong>✔ High-Performance & Secure Applications –</strong> Reliability at its core</li>
+            <li><strong>✔ Client-Centric Approach –</strong> We grow with your business</li>
+        </ul>
+
+        <p>
+            At <strong>AppLoom Tech</strong>, we don’t just develop software—we craft the future of technology.
+        </p>
     </section>
 
-    <section id="services" class="bg-light py-5">
+    <section id="services" class="bg-light py-4">
         <div class="container">
             <h2>Our Services</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <img src="./images/app-development-frameworks.png" alt="Web & App Development" class="service-img">
+                    <img src="./images/webapp.png" alt="Web & App Development" class="service-img">
                     <h3>Web & App Development</h3>
-                    <p>Responsive, modern websites built with the latest frameworks.</p>
+                    <p>We build modern, responsive websites and high-performance mobile apps, ensuring seamless user experiences and scalable solutions.</p>
                 </div>
                 <div class="col-md-4">
                     <img src="./images/end-to-end-product-management.png" alt="Product Management" class="service-img">
                     <h3>Product Management</h3>
-                    <p>Responsive, modern websites built with the latest frameworks.</p>
+                    <p>We offer enterprise solutions (ERP, CRM, LMS), and scalable e-commerce platforms to ensure productivity experiences for businesses.</p>
                 </div>
                 <div class="col-md-4">
                     <img src="./images/design.jpg" alt="Logo & Portfolio" class="service-img">
                     <h3>Logo & Portfolio</h3>
-                    <p>Turning raw data into actionable insights for your business.</p>
+                    <p>We craft unique brand identities and professional portfolios that enhance your business presence and credibility.</p>
                 </div>
             </div>
         </div>
@@ -118,7 +144,7 @@
         </div>
     </section>     -->
 
-    <section id="contact" class="bg-light py-5">
+    <section id="contact" class="bg-light py-4">
         <div class="container">
             <h2>Contact Us</h2>
             <form id="contact-form">
@@ -152,13 +178,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
     <script>
-        document.addEventListener("contextmenu", event => event.preventDefault()); // Disable right-click
+        // document.addEventListener("contextmenu", event => event.preventDefault()); // Disable right-click
 
-        document.onkeydown = function(event) {
-            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
-                event.preventDefault();
-            }
-        };
+        // document.onkeydown = function(event) {
+        //     if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+        //         event.preventDefault();
+        //     }
+        // };
 
         (function() {
             emailjs.init("d7qLg1HSrYZGI3bZm"); // Only use the PUBLIC key
